@@ -4,7 +4,6 @@ Buying
 Projects
 Selling
 Setup
-Manufacturing
 Stock
 Support
 Utilities
@@ -13,7 +12,6 @@ Portal
 Maintenance
 Regional
 ERPNext Integrations
-Quality Management
 Communication
 Telephony
 Bulk Transaction

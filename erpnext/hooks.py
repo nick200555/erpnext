@@ -444,7 +444,7 @@ auto_cancel_exempted_doctypes = [
 scheduler_events = {
 	"cron": {
 		"0/15 * * * *": [
-			"erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs",
+			"erpnext..doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs",
 		],
 		"0/30 * * * *": [
 			"erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.run_parallel_reposting",
@@ -485,7 +485,7 @@ scheduler_events = {
 		"erpnext.crm.doctype.contract.contract.update_status_for_contracts",
 		"erpnext.projects.doctype.project.project.update_project_sales_billing",
 		"erpnext.projects.doctype.project.project.send_project_status_email_to_users",
-		"erpnext.quality_management.doctype.quality_review.quality_review.review",
+		"erpnext..doctype.quality_review.quality_review.review",
 		"erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status",
 		"erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts",
 		"erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status",
@@ -498,7 +498,7 @@ scheduler_events = {
 		"erpnext.stock.reorder_item.reorder_item",
 		"erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process",
 		"erpnext.setup.doctype.email_digest.email_digest.send",
-		"erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms",
+		"erpnext..doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms",
 		"erpnext.crm.utils.open_leads_opportunities_based_on_todays_event",
 		"erpnext.assets.doctype.asset.depreciation.post_depreciation_entries",
 	],
