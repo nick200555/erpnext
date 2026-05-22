@@ -20,7 +20,7 @@ add_to_apps_screen = [
 	}
 ]
 
-develop_version = "17.x.x-develop"
+develop_version = "15.x.x-custom"
 
 app_include_js = "erpnext.bundle.js"
 app_include_css = "erpnext.bundle.css"
@@ -107,7 +107,7 @@ jinja = {
 # website
 webform_list_context = "erpnext.controllers.website_list_for_contact.get_webform_list_context"
 
-calendars = ["Task", "Work Order", "Sales Order", "Holiday List", "ToDo"]
+calendars = ["Task", "Sales Order", "Holiday List", "ToDo"]
 
 website_generators = ["BOM", "Sales Partner"]
 
@@ -443,17 +443,13 @@ auto_cancel_exempted_doctypes = [
 
 scheduler_events = {
 	"cron": {
-		"0/15 * * * *": [
-			"erpnext..doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs",
-		],
+		"0/15 * * * *": [],
 		"0/30 * * * *": [
 			"erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.run_parallel_reposting",
 		],
-		# Hourly but offset by 30 minutes
 		"30 * * * *": [
 			"erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs",
 		],
-		# Daily but offset by 45 minutes
 		"45 0 * * *": [],
 	},
 	"hourly": [
@@ -485,7 +481,6 @@ scheduler_events = {
 		"erpnext.crm.doctype.contract.contract.update_status_for_contracts",
 		"erpnext.projects.doctype.project.project.update_project_sales_billing",
 		"erpnext.projects.doctype.project.project.send_project_status_email_to_users",
-		"erpnext..doctype.quality_review.quality_review.review",
 		"erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status",
 		"erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts",
 		"erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status",
@@ -498,7 +493,6 @@ scheduler_events = {
 		"erpnext.stock.reorder_item.reorder_item",
 		"erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process",
 		"erpnext.setup.doctype.email_digest.email_digest.send",
-		"erpnext..doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms",
 		"erpnext.crm.utils.open_leads_opportunities_based_on_todays_event",
 		"erpnext.assets.doctype.asset.depreciation.post_depreciation_entries",
 	],
@@ -654,11 +648,9 @@ global_search_doctypes = {
 		{"doctype": "Warehouse", "index": 3},
 		{"doctype": "Account", "index": 4},
 		{"doctype": "Employee", "index": 5},
-		{"doctype": "BOM", "index": 6},
 		{"doctype": "Sales Invoice", "index": 7},
 		{"doctype": "Sales Order", "index": 8},
 		{"doctype": "Quotation", "index": 9},
-		{"doctype": "Work Order", "index": 10},
 		{"doctype": "Purchase Order", "index": 11},
 		{"doctype": "Purchase Receipt", "index": 12},
 		{"doctype": "Purchase Invoice", "index": 13},
